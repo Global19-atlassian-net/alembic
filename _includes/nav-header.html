@@ -57,6 +57,7 @@ applyToggle('.list--nav', '.button', 640);
 
   
 //const applyToggle = (list, button) => {
+  window.addEventListener('resize', () => { console.log(document.body.clientWidth) });
   const navList = document.querySelector('.list--nav');
   const navButton = document.querySelector('.button');
   var style = window.getComputedStyle ? getComputedStyle(navList, null) : navList.currentStyle;  
