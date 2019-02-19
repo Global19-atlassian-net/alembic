@@ -40,6 +40,7 @@ const applyToggle = (list, button, breakpoint) => {
     navList.style.maxHeight = '0px'
 
     navButton.onclick = () => {
+      console.log('NAV 1');
       if (navList.style.maxHeight == '0px') {
         navList.style.maxHeight = `${navHeight}px`
       } else {
@@ -49,6 +50,7 @@ const applyToggle = (list, button, breakpoint) => {
   }
 }
 
-applyToggle('.list--nav', '.button', 640)
+applyToggle('.list--nav', '.button', 640);
+console.log('NAV 2');
 
 </script>
