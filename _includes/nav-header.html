@@ -39,7 +39,7 @@ const applyToggle = (list, button, breakpoint) => {
     const navHeight = navList.clientHeight
     const navButton = document.querySelector(button)
     navList.style.maxHeight = '0px'
-
+    console.log('NAV 2');
     navButton.onclick = () => {
       console.log('NAV 1');
       if (navList.style.maxHeight == '0px') {
