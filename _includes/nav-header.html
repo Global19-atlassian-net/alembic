@@ -55,8 +55,8 @@ applyToggle('.list--nav', '.button', 640);
 */
   
 //const applyToggle = (list, button) => {
-  const navList = document.querySelector(list);
-  const navButton = document.querySelector(button);
+  const navList = document.querySelector('.list--nav');
+  const navButton = document.querySelector('.button');
   navButton.onclick = () => {
     console.log('NAV1');
     if (navList.style.display === 'none') {
