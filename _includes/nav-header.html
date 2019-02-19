@@ -62,10 +62,10 @@ applyToggle('.list--nav', '.button', 640);
   window.addEventListener('resize', () => {
     if (document.body.clientWidth < 640) {
       console.log('resize none', document.body.clientWidth);
-      navList.style.display === 'none';
+      navList.style.display = 'none';
     } else {
       console.log('resize block', document.body.clientWidth);
-      navList.style.display === 'block';
+      navList.style.display = 'block';
     }
   });
   navButton.onclick = () => {
