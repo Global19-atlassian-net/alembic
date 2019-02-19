@@ -57,13 +57,20 @@ applyToggle('.list--nav', '.button', 640);
 
   
 //const applyToggle = (list, button) => {
-  window.addEventListener('resize', () => { console.log(document.body.clientWidth) });
   const navList = document.querySelector('.list--nav');
   const navButton = document.querySelector('.button');
-  var style = window.getComputedStyle ? getComputedStyle(navList, null) : navList.currentStyle;  
+  window.addEventListener('resize', () => {
+    if (document.body.clientWidth < 640) {
+      console.log('resize none', document.body.clientWidth);
+      navList.style.display === 'none';
+    } else {
+      console.log('resize block', document.body.clientWidth);
+      navList.style.display === 'block';
+    }
+  });
   navButton.onclick = () => {
     console.log('NAV1');
-    if (navList.style.display === 'none' || style.display === 'none') {
+    if (navList.style.display === 'none') {
       navList.style.display = 'block';
       console.log('NAV2');
     } else {
