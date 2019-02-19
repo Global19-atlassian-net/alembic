@@ -53,4 +53,18 @@ const applyToggle = (list, button, breakpoint) => {
 
 applyToggle('.list--nav', '.button', 640);
 */
+  
+const applyToggle = (list, button) => {
+  const navList = document.querySelector(list);
+  const navButton = document.querySelector(button);
+  navButton.onclick = () => {
+    if (navList.style.display === 'none') {
+      navList.style.display = 'block';
+    } else {
+      navList.style.display = 'none'
+    }
+  }
+};
+applyToggle('.list--nav', '.button');
+
 </script>
