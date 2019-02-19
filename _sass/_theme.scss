@@ -453,3 +453,10 @@ pre code {
     overflow-x: scroll;
   }
 }
+
+// nav bar toggle fix addition
+@media screen and (max-width: 639px) {
+  .list--nav {
+		display: none;
+	}
+}
