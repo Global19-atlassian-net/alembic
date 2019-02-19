@@ -59,6 +59,13 @@ applyToggle('.list--nav', '.button', 640);
 //const applyToggle = (list, button) => {
   const navList = document.querySelector('.list--nav');
   const navButton = document.querySelector('.button');
+  if (document.body.clientWidth < 640) {
+    console.log('resize none', document.body.clientWidth);
+    navList.style.display = 'none';
+  } else {
+    console.log('resize block', document.body.clientWidth);
+    navList.style.display = 'block';
+  }
   window.addEventListener('resize', () => {
     if (document.body.clientWidth < 640) {
       console.log('resize none', document.body.clientWidth);
