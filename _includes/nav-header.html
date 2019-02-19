@@ -54,12 +54,15 @@ const applyToggle = (list, button, breakpoint) => {
 applyToggle('.list--nav', '.button', 640);
 */
   
+
+  
 //const applyToggle = (list, button) => {
   const navList = document.querySelector('.list--nav');
   const navButton = document.querySelector('.button');
+  var style = window.getComputedStyle ? getComputedStyle(navList, null) : navList.currentStyle;  
   navButton.onclick = () => {
     console.log('NAV1');
-    if (navList.style.display === 'none') {
+    if (navList.style.display === 'none' || style.display === 'none') {
       navList.style.display = 'block';
       console.log('NAV2');
     } else {
